@@ -54,7 +54,18 @@
                         <legend>Add a new product</legend>
                         <div class="mb-3">
                             <label for="category_id" class="form-label">Category</label>
-                            <input type="text" class="form-control" id="category_id" name="category_id" required>
+                            <form class="ms-2 me-auto" hx-post="/product/" hx-target="#productList" hx-swap="beforeend">
+                                <fieldset>
+                                    <div class="mb-3">
+                                        <select class="form-select" id="product.category.name" name="product.category.name" required>
+                                            <option value="" disabled selected>Select a category</option>
+                                            <option value="1">Electronics</option>
+                                            <option value="2">Clothing</option>
+                                            <option value="3">Home & Garden</option>
+                                            <option value="4">Books</option>
+                                            <option value="5">Toys</option>
+                                        </select>
+                                    </div>                            
                         </div>
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
@@ -79,6 +90,7 @@
                         <button type="submit" class="btn btn-primary">Submit Form</button>
                     </fieldset>
                   </form>
+                  <br>
 
             </div>
         </div>

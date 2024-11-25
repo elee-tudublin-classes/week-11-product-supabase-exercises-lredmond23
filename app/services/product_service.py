@@ -26,6 +26,7 @@ def updateProduct(input: Product) :
     # return updated product
     return product
 
-
 def deleteProduct(id : int) :
     result = dataDeleteProduct(id)
+
+
